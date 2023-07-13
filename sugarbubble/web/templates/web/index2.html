@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Bubble</title>
+    <link rel="stylesheet" href="{% static 'styl2.css' %}">
+    <link href="https://api.fontshare.com/v2/css?f[]=bonny@700,300,500,400,100,1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/182603b8d9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/182603b8d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="container">
+        <div class="f-l">
+            <i class="fa-solid fa-bars" style="color: #ff8800;" id="mobilemenu"></i>
+            <h1> <a href="{% url 'index' %}">Sugar bubble</a></h1>
+                <nav>
+                    <ul class="list">
+                        <li><a id="menu" href="">MENU</a></li>
+                        <li><a href="">CUSTOM CAKE</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div id="abc">
+                    <img  src="{% static 'Sugar Bubble (2)/Vector.png' %}" alt="">
+                    <img  src="{% static 'Sugar Bubble (2)/bold/Vector.png' %}" alt="">
+                </div>
+        </div>   
+    </header>
+    <div class="hidden-box" id="hidden-div">
+        <div class="hidden-menu">
+            <h1>MENU</h1>
+        </div>
+        <div class="hidden-list">
+            <ul>
+                <li><a href="./index2.html">Cakes</a></li>
+                <li><a href="#">Muffins</a></li>
+                <li><a href="#">CupCakes</a></li>
+                <li><a href="#">Popsicle</a></li>
+            </ul>
+        </div>
+        <div class="hidden-close">
+            <i id="mmm" class="fa-regular fa-circle-xmark"></i>
+        </div>
+    </div>   
+    <section class="container a1">
+        <div class="aw">
+            <div class="s-t">
+                <h4>Sort by popularity</h4>
+                <div>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="c-y">
+                <h4>CATEGORY</h4>
+                <div class="c-k">
+                    <h5>Cake</h5>
+                    <div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>    
+            <hr>
+            <div class="f-p">
+                <h4>Filter by price</h4>
+            </div>
+            <div class="sil">
+            <div class="pro"></div>
+            </div>
+            <h3 class="price">price:₹80 ~ ₹2000</h3>
+            <div class="rightbox">
+                <input type="checkbox" name="In-stock" id="stock">
+                <label for="In-stock">In stock</label>
+            </div>
+        </div>
+        <div class="cake">
+            
+                <div>
+                    <img src="{% static 'images/Rectangle 6 (2).png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Pumpkin Cake</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/Rectangle 6.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Bundt Cake</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/Rectangle 6-1.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Caramel Cake</p>
+                </div>
+            
+            
+                <div>
+                    <img src="{% static 'images/Rectangle 6-2.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Banana Cake</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/Rectangle 6-3.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Chocolate Cake</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/Rectangle 6-4.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Coffee Cake</p>
+                </div>
+            
+            
+                <div>
+                    <img src="{% static 'images/Rectangle 6-5.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Butterscotch Bliss Cake</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/Rectangle 6-6.png' %}" alt="">
+                    <h3>₹ 540</h3>
+                    <p>Chocolate Fudge Cake</p>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="f-pg">
+            <div class="sr-b">
+                <h3>Sugar Bubble</h3>
+                <p>Baking your<br> dreams come true.</p>
+                <img src="{% static 'Sugar Bubble (2)/Vector.png' %}" alt="">
+                <img src="{% static 'Sugar Bubble (2)/bold/Vector.png' %}" alt="">
+            </div>
+            <div class="sr-1">
+                <h4>Get in touch</h4>
+                <p>Question or feedback ? We’d love to here from you</p>
+                <div class="textmail">
+                    <input type="text" class="mail" placeholder="Email">
+                  <div>
+                        <i class="fa-solid fa-paper-plane" style="color: #ffae00;"></i>
+                   </div>
+                </div>
+            </div>
+        
+            <div class="sr-2">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="abcd">
+            <img  src="{% static 'sugar Bubble (2)/Vector.png' %}" alt="">
+            <img  src="{% static 'Sugar Bubble (2)/bold/Vector.png' %}" alt="">
+        </div>
+</div>   
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

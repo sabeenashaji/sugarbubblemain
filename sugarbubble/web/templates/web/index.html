@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar bubble</title>
+    <link rel="stylesheet" href="{% static 'styl.css' %}">
+    <link href="https://api.fontshare.com/v2/css?f[]=bonny@700,300,500,400,100,1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/182603b8d9.js" crossorigin="anonymous"></script>                  
+</head>
+<body>
+    <header class="container">
+        <div class="f-l">
+            <i class="fa-solid fa-bars" style="color: #ff8800;" id="mobilemenu"></i>
+            <div class="m-li">
+                <h1>MENU</h1>
+                <ul>
+                    <li>Cake</li>
+                    <li>Muffins</li>
+                    <li>Cupcake</li>
+                    <li>Popsicle</li>
+                </ul>
+                <i class="fa-regular fa-circle-xmark" style="color: #ff7300;"></i>
+                <i class="fa-brands fa-instagram" style="color: #080a0d;"></i>
+                <i class="fa-brands fa-facebook" style="color: #000000;"></i>
+            </div>
+            <h1>Sugar bubble</h1>   
+            <div>
+                <nav>
+                    <ul class="list">
+                        <li><a id="menu" href="#">MENU</a></li>
+                        <li><a href="#">CUSTOM CAKE</a></li>
+                        <li><a href="#a-s">ABOUT</a></li>
+                        <li><a href="#sr-1">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <nav class="l-ul" id="jav">
+                    <ul>
+                        <li><a href="{% url 'index2' %}">Cake</a></li>
+                        <li><a href="#">Muffins</a></li>
+                        <li><a href="#">Cupcake</a></li>
+                        <li><a href="#">Popsicle</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="none">
+                <img src="{% static 'Sugar Bubble (2)/Vector.png' %}" alt="">
+                <img src="{% static 'Sugar Bubble (2)/bold/Vector.png' %}" alt="">
+            </div>    
+        </div>
+    </header> 
+    <div class="hidden-box" id="hidden-div">
+        <div class="hidden-menu">
+            <h1>MENU</h1>
+        </div>
+        <div class="hidden-list">
+            <ul>
+                <li><a href="{% url 'index2' %}">Cakes</a></li>
+                <li><a href="#">Muffins</a></li>
+                <li><a href="#">CupCakes</a></li>
+                <li><a href="#">Popsicle</a></li>
+            </ul>
+        </div>
+        <div class="hidden-close">
+            <i id="mmm" class="fa-regular fa-circle-xmark"></i>
+        </div>
+    </div>   
+    <section class="container">
+        <div class="spotlight">
+            <div>
+                <h1>Make Every<br> Occasion Memorable </h1>
+                <h2>With Our Deleetable Cakes</h2>
+               
+            </div>
+            <div class="main-img">
+                <img src="{% static 'Sugar Bubble (2)/Rectangle 1.png' %}" alt="">
+            </div>
+        </div>
+        <div class="after-spt">
+            <h4>Choclate Lava Cake</h4>
+            <p>A chocolate cake with a molten chocolate center.<br> Serve warm with ice cream or whipped cream.</p>
+            <div class="flex hhh">
+            <button class="order">Order Now</button>
+            <h3 class="top">₹ 650</h3>
+             </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="cake-box">
+            <h2>Our best sellers</h2>
+            <div>
+                <ul>
+                    <li><a href="#">Cake</a></li>
+                    <li><a href="#">Muffins</a></li>
+                    <li><a href="#">Cupcake</a></li>
+                    <li><a href="#">Popsicle</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cake">
+            {% for item in items %}
+                <div class="cake-s">
+                    
+                    <img src="{{ item.image.url }}" alt="">
+                    <h4>{{ item.price }}</h4>
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.description }}
+                    <p> <button><a href='https://wa.me/qr/GXMALPEUBH3TL1'></a>Order Now</button> </p>  
+            </div>
+           {% endfor %}
+
+           <!-- <div class="cake-s">
+                <img src="{% static 'Sugar Bubble (2)/Rectangle 4-1.png' %}" alt="">
+                <h4>₹ 650</h4>
+                <h3>Red Velvet Cake</h3>
+                <p>A moist and fluffy cake with a deep red color and a tangy cream cheese frosting.</p>
+                <p><button><a href="">Order Now</a></button></p>
+           </div>
+           <div class="cake-s">
+                <img src="{% static 'Sugar Bubble (2)/Rectangle 4-2.png' %}" alt="">
+                <h4>₹ 500</h4>
+                <h3>Strawberry Cake</h3>
+                <p>A delicate and moist cake with fresh strawberries and a fluffy whipped cream frosting.</p>
+                <p><button><a href="">Order Now</a></button></p>
+           </div>
+           <div class="cake-s">
+                <img src="{% static 'Sugar Bubble (2)/Rectangle 4-3.png' %}" alt="">
+                <h4>₹ 500</h4>
+                <h3>Black Forest Cake</h3>
+                <p>A decadent chocolate cake with layers of whipped cream and cherry filling, garnished with chocolate shavings.
+                <p><button><a href="">Order Now</a></button></p>   
+           </div>
+        </div> -->
+        </div>
+        <div class="star">
+            <div class="star-s">
+                <img src="{% static 'Sugar Bubble (2)/Star 2.png' %}" alt="" class="star2">
+                <h2>Why people love Sugar Bubble cakes</h2>
+                <img src="{% static 'Sugar Bubble (2)/Star 2.png' %}" alt="" class="star1">
+            </div>
+            <div class="s-r">
+                <p>Sugar Bubble made a stunning unicorn cake for my daughter’s party. Rainbow layers and a cute fondant unicorn. My daughter was thrilled. The cake was yummy and moist. Sugar Bubble is the best!</p>
+                <h4>-Mary</h4>
+            </div>    
+        </div>
+        <div class="a-s" id="a-s">
+            <h2>About us</h2>
+            <p>Sugar Bubble is a cake shop that makes you happy. We are a team of bakers who love to create amazing cakes for any occasion. We use fresh and quality ingredients and bake everything from scratch. We can customize your cake with any flavor, filling, frosting, and decoration you want. Our cakes are delicious and beautiful. We offer online ordering, delivery, and free consultations and tastings. Come and visit us today and see why we are the best cake shop in town.</p>
+        </div>
+    </section>
+            <footer>
+                <div class="f-r">
+                    <div>
+                        <img id="mm" src="{% static 'Sugar Bubble (2)/Vector 3.png' %}" alt="" class="vector">
+                    </div>
+                    <div id="of-r"> 
+                       <h2>Upto 20% offer</h2>
+                       <p>On online order for Occasional and Corporate events</p>
+                       <button>Order Now</button>
+                   </div>  
+                </div>
+                <div class="f-pg container">
+                    <div class="sr-b">
+                        <h3>Sugar Bubble</h3>
+                        <p>Baking your<br> dreams come true.</p>
+                        <img src="{% static 'Sugar Bubble (2)/Vector.png' %}" alt="">
+                        <img src="{% static 'Sugar Bubble (2)/bold/Vector.png' %}" alt="">
+                    </div>
+                    <div class="sr-1" id="sr-1">
+                        <h4>Get in touch</h4>
+                        <p>Question or feedback ? We’d love to here from you</p>
+                        <div class="textmail">
+                            <input type="text" class="mail" placeholder="email">
+                            <div>
+                                <i class="fa-solid fa-paper-plane" style="color: #ff7300;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sr-2">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="">MENU</a></li>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
